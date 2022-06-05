@@ -1,6 +1,6 @@
-<table>
+<table class="table table-hover">
     <tr valign="top">
-        <td>
+        <td width="70px">
             {{ project.body }}<br>
             <p>Project <a href= {{project.describe}} >Describe</a></p>
             {{ project.type }}<br>
@@ -8,8 +8,8 @@
             {{ project.current_number_of_students}}<br>
             {{ project.max_students }}<br>
             {{ project.name }}<br>
-            <input type="submit" name="submit_button" value="Do Something">
-            <input type="submit" name="submit_button" value="Do Something Else">
+            <input type="submit" name="submit_button" value="Tick(TODO)">
+            <input type="submit" name="submit_button" value="Cross(TODO)">
         </td>
     </tr>
 </table>

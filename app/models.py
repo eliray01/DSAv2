@@ -6,7 +6,6 @@ from app import login
 from hashlib import md5
 from flask import session
 
-from sqlalchemy.orm import relationship, backref
 
 user_project = db.Table("user_project",
                         db.Column('user_id', db.Integer, db.ForeignKey('user.id')),
