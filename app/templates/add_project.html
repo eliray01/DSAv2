@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Add Project</h1>
+    <form action="" method="post"  novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.body.label }}<br>
+            {{ form.body() }}<br>
+            {% for error in form.body.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.describe.label }}<br>
+            {{ form.describe(size=32) }}<br>
+            {% for error in form.describe.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.type.label }}<br>
+            {{ form.type() }}<br>
+            {% for error in form.type.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.view.label }}<br>
+            {{ form.view() }}<br>
+            {% for error in form.view.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.max_students.label }}<br>
+            {{ form.max_students(size=32) }}<br>
+            {% for error in form.max_students.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.name.label }}<br>
+            {{ form.name() }}<br>
+            {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+ {% endblock %}
